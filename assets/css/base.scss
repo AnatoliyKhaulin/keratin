@@ -1,0 +1,26 @@
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab:wght@500;600&display=swap');
+
+// Variables
+
+$clr-accent: #2d74ff;
+$clr-black: #171832;
+
+body {
+  color: $clr-black;
+}
+
+h1 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 600;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.main-wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  width: auto;
+}
