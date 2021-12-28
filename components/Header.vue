@@ -1,6 +1,6 @@
 <template>
   <header class="main-header">
-    <a-menu v-model="currentNav" mode="horizontal">
+    <a-menu v-model="currentNav" mode="horizontal" class="main-header__menu">
       <a-menu-item key="about">
         <a-icon type="fund" />
         О курсе
@@ -108,10 +108,15 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="less">
 .main-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 10px 0;
+
+  &__menu {
+    background-color: @bg-color;
+  }
 }
 </style>

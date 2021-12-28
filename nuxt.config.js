@@ -18,18 +18,22 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['ant-design-vue/dist/antd.css', '@/assets/css/base.scss'],
+  css: ['ant-design-vue/dist/antd.css', '@/assets/css/base.less'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['@/plugins/antd-ui'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
+  styleResources: {
+    less: './assets/css/variables.less',
+  },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+    '@nuxtjs/style-resources',
     // '@agility/agilitycms-nuxt-module',
   ],
   // agilitycms: {
@@ -50,5 +54,13 @@ export default {
   content: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    loaders: {
+      less: {
+        lessOptions: {
+          javascriptEnabled: true,
+        },
+      },
+    },
+  },
 }

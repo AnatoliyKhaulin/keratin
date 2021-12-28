@@ -3,9 +3,7 @@
     <div class="intro-title">
       <p class="intro-title__sup">Курс</p>
       <h1 class="intro-title__title">Кератиновое выпрямление и ботокс волос</h1>
-      <a-button type="primary" size="large" @click="showModal">
-        Записаться на курс
-      </a-button>
+      <a-button type="primary" size="large"> Записаться на курс </a-button>
     </div>
     <div>
       <picture class="intro__image">
@@ -24,7 +22,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="less">
 .intro {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -34,8 +32,9 @@ export default {
 
   &__image {
     display: block;
-    height: 550px;
-    width: 550px;
+    margin: auto;
+    height: 360px;
+    width: 360px;
     overflow: hidden;
     border-radius: 50%;
 
@@ -55,7 +54,7 @@ export default {
   }
 
   &__sup {
-    color: #1890ff;
+    color: @primary-color;
     font-family: 'Roboto Slab', serif;
     font-weight: 500;
     font-size: 32px;
