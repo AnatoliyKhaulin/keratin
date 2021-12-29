@@ -65,6 +65,17 @@
         </picture>
       </div>
     </div>
+
+    <footer class="about__footer">
+      <p>
+        Курс с нуля строго индивидуальный, длится 2 полных дня с 10:00 до вечера
+        (как закончим) На курсе предоставляются все методички, теоретические
+        материалы, модели, расходные материалы, вкусняшки, шампанское в конце -
+        вам нужна с собой только тетрадь с ручкой и хорошее настроение.
+      </p>
+      <p>Поддержка после обучения от меня 24/7 навсегда</p>
+      <p>Стоимость курса 20.000 рублей</p>
+    </footer>
   </section>
 </template>
 
@@ -78,12 +89,20 @@ export default {
 .about {
   &__description {
     padding: 20px 0;
-    width: 70%;
+    width: 80%;
+    text-align: center;
     margin: 0 auto 40px;
 
     h5 {
       font-size: 22px;
     }
+  }
+
+  &__footer {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto 40px;
+    text-align: center;
   }
 }
 
@@ -91,10 +110,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  &:not(:last-of-type) {
-    margin-bottom: 60px;
-  }
+  margin-bottom: 60px;
 
   &__text {
     width: 60%;
