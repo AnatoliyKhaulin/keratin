@@ -33,8 +33,8 @@ export default {
   &__image {
     display: block;
     margin: auto;
-    height: 360px;
-    width: 360px;
+    height: 420px;
+    width: 420px;
     overflow: hidden;
     border-radius: 50%;
 

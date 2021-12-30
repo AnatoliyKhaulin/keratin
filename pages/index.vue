@@ -4,6 +4,7 @@
       <Header />
       <Intro />
       <About />
+      <Works />
     </main>
   </a-config-provider>
 </template>
@@ -12,9 +13,10 @@
 import Header from '~/components/Header'
 import Intro from '~/components/Intro'
 import About from '~/components/About'
+import Works from '~/components/Works'
 
 export default {
-  components: { Header, Intro, About },
+  components: { Header, Intro, About, Works },
   data: () => ({
     some: 'самый главный',
   }),
