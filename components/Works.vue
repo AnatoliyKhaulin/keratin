@@ -1,5 +1,5 @@
 <template>
-  <section class="works">
+  <section id="works" class="works">
     <h2 class="section-title">Работы моей студии</h2>
   </section>
 </template>

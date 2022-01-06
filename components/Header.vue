@@ -1,19 +1,23 @@
 <template>
   <header class="main-header">
-    <a-menu v-model="currentNav" mode="horizontal" class="main-header__menu">
-      <a-menu-item key="about">
-        <a-icon type="fund" />
-        О курсе
-      </a-menu-item>
-      <a-menu-item key="works">
-        <a-icon type="home" />
-        Студия
-      </a-menu-item>
-      <a-menu-item key="reviews">
-        <a-icon type="message" />
-        Отзывы
-      </a-menu-item>
-    </a-menu>
+    <a-anchor wrapper-class="main-header__anchor" :affix="false">
+      <a-menu v-model="currentNav" mode="horizontal" class="main-header__menu">
+        <a-menu-item key="about">
+          <a-icon type="fund" />
+          <!-- О курсе -->
+          <a-anchor-link href="#about" title="О курсе" />
+        </a-menu-item>
+        <a-menu-item key="works">
+          <a-icon type="home" />
+          <a-anchor-link href="#works" title="Студия" />
+        </a-menu-item>
+        <a-menu-item key="reviews">
+          <a-icon type="message" />
+          <a-anchor-link href="#reviews" title="Отзывы" />
+        </a-menu-item>
+      </a-menu>
+    </a-anchor>
+
     <a-button type="primary" size="large" @click="showModal">
       Записаться на курс
     </a-button>
@@ -117,6 +121,31 @@ export default {
 
   &__menu {
     background-color: @bg-color;
+  }
+
+  &__anchor {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+
+    .ant-anchor {
+      padding: 0;
+      margin: 0;
+    }
+
+    .ant-anchor-ink {
+      display: none;
+    }
+
+    .ant-anchor-link {
+      padding: 0;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .ant-menu-item {
+      cursor: default;
+    }
   }
 }
 </style>

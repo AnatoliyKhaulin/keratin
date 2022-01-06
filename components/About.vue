@@ -1,5 +1,5 @@
 <template>
-  <section class="about">
+  <section id="about" class="about">
     <h2 class="section-title">О моем курсе</h2>
 
     <div class="about__wrapper">
@@ -67,18 +67,54 @@
     </div>
 
     <footer class="about__footer">
-      <p>
-        Курс с нуля строго индивидуальный, длится 2 полных дня с 10:00 до вечера
-        <br />
-        (как закончим).
-      </p>
-      <p>
-        На курсе предоставляются все методички, теоретические материалы, модели,
-        расходные материалы, вкусняшки, шампанское в конце.
-      </p>
-      <p>Вам нужна с собой только тетрадь с ручкой и хорошее настроение.</p>
-      <p>Поддержка после обучения от меня 24/7 навсегда.</p>
-      <p>Стоимость курса <strong>20.000 рублей</strong>.</p>
+      <article class="about-result">
+        <picture class="about-result__icon">
+          <img src="images/icons/i_beauty_saloon.png" alt="" />
+        </picture>
+        <h5 class="about-result__title">
+          Курс с нуля строго индивидуальный, длится 2 полных дня с 10:00 до
+          вечера
+          <br />
+          (как закончим).
+        </h5>
+      </article>
+
+      <article class="about-result">
+        <picture class="about-result__icon">
+          <img src="images/icons/i_guidelines.png" alt="" />
+        </picture>
+        <h5 class="about-result__title">
+          На курсе предоставляются все методички, теоретические материалы,
+          модели, расходные материалы, вкусняшки, шампанское в конце.
+        </h5>
+      </article>
+
+      <article class="about-result">
+        <picture class="about-result__icon">
+          <img src="images/icons/i_notes.png" alt="" />
+        </picture>
+        <h5 class="about-result__title">
+          Вам нужна с собой только тетрадь с ручкой и хорошее настроение.
+        </h5>
+      </article>
+
+      <article class="about-result">
+        <picture class="about-result__icon">
+          <img src="images/icons/i_24_hours.png" alt="" />
+        </picture>
+        <h5 class="about-result__title">
+          Поддержка после обучения от меня 24/7 навсегда.
+        </h5>
+      </article>
+
+      <artilce class="about-price">
+        <picture class="about-price__icon">
+          <img src="images/icons/i_ruble.png" alt="" />
+        </picture>
+        <h5 class="about-price__title">
+          Стоимость курса <strong>20.000 рублей</strong>.
+        </h5>
+      </artilce>
     </footer>
   </section>
 </template>
@@ -93,9 +129,8 @@ export default {
 .about {
   &__description {
     padding: 20px 0;
-    width: 80%;
-    text-align: center;
-    margin: 0 auto 40px;
+    width: 50%;
+    margin-bottom: 40px;
 
     h5 {
       font-size: 22px;
@@ -103,17 +138,12 @@ export default {
   }
 
   &__footer {
-    width: 80%;
     text-align: center;
     margin: 0 auto 40px;
     padding-top: 10px;
-    text-align: center;
-    font-weight: 500;
-    font-size: 18px;
-
-    strong {
-      font-weight: 900;
-    }
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
   }
 }
 
@@ -130,9 +160,8 @@ export default {
   &__icon {
     width: 350px;
     height: 350px;
-    border-radius: 50%;
+    border-radius: 8px;
     overflow: hidden;
-    border: 10px solid @white-color;
 
     img {
       width: 100%;
@@ -155,7 +184,7 @@ export default {
 
     li {
       position: relative;
-      padding-left: 18px;
+      padding-left: 0;
 
       &:not(:last-of-type) {
         margin-bottom: 8px;
@@ -164,11 +193,14 @@ export default {
       &::before {
         content: '';
         position: absolute;
-        left: 0;
-        top: 10px;
-        width: 10px;
-        height: 2px;
+        left: -16px;
+        top: -2px;
+        width: 24px;
+        height: 24px;
+        z-index: -1;
+        border-radius: 5px;
         background-color: @primary-color;
+        opacity: 0.3;
       }
     }
   }
@@ -177,6 +209,54 @@ export default {
     .about-list__text {
       width: 60%;
     }
+  }
+}
+
+.about-result,
+.about-price {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 25%;
+  padding: 20px 5px;
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #f8f8f8;
+    margin-bottom: 20px;
+
+    img {
+      width: 50%;
+      height: 50%;
+    }
+  }
+
+  &__title {
+    font-family: @base-font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 0;
+  }
+}
+
+.about-price {
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 100%;
+
+  &__icon {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+
+  &__title {
+    font-size: 22px;
   }
 }
 </style>

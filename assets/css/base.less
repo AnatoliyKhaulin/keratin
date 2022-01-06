@@ -1,14 +1,15 @@
 @import '~assets/css/variables.less';
 // FONTS
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto+Slab:wght@500;600&display=swap');
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: @base-font;
   background-color: @bg-color;
   scrollbar-width: none;
   -ms-overflow-style: none;
   background-color: @bg-color;
   font-size: 16px;
+  font-weight: 400;
 
   &::-webkit-scrollbar {
     width: 0;
@@ -21,12 +22,23 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Roboto Slab', serif;
+  font-family: @title-font;
   font-weight: 600;
 }
 
 p {
   line-height: 1.4;
+}
+
+strong {
+  font-weight: 600;
+  color: #000;
+}
+
+a {
+  &:hover {
+    color: @primary-color;
+  }
 }
 
 .main-wrapper {
