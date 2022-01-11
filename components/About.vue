@@ -3,19 +3,24 @@
     <h2 class="section-title">О моем курсе</h2>
 
     <div class="about__wrapper">
-      <article class="about__description">
-        <h5>Всем привет!</h5>
-        <p>
-          Меня зовут Новикова Александра, я сертифицированный мастер и технолог
-          в сфере реконструкции волос. Преображаю волосы моих прекрасных гостей
-          более 4 лет.
-        </p>
-        <p>Я рада тебя видеть на странице своей студии.</p>
-        <p>
-          В моей студии вы можете не только сделать себе красивые волосы, но и
-          пройти обучение самой востребованной профессии современности: мастер
-          реконструкции волос.
-        </p>
+      <article class="about-description">
+        <div class="about-description__text">
+          <h5>Всем привет!</h5>
+          <p>
+            Меня зовут Новикова Александра, я сертифицированный мастер и
+            технолог в сфере реконструкции волос. Преображаю волосы моих
+            прекрасных гостей более 4 лет.
+          </p>
+          <p>Я рада тебя видеть на странице своей студии.</p>
+          <p>
+            В моей студии вы можете не только сделать себе красивые волосы, но и
+            пройти обучение самой востребованной профессии современности: мастер
+            реконструкции волос.
+          </p>
+        </div>
+        <picture class="about-description__photo"
+          ><img src="images/about.jpg" alt=""
+        /></picture>
       </article>
 
       <div class="about-list">
@@ -103,18 +108,18 @@
           <img src="images/icons/i_24_hours.png" alt="" />
         </picture>
         <h5 class="about-result__title">
-          Поддержка после обучения от меня 24/7 навсегда.
+          Поддержка после обучения от меня 24/7 - навсегда.
         </h5>
       </article>
 
-      <artilce class="about-price">
+      <article class="about-price">
         <picture class="about-price__icon">
           <img src="images/icons/i_ruble.png" alt="" />
         </picture>
         <h5 class="about-price__title">
           Стоимость курса <strong>20.000 рублей</strong>.
         </h5>
-      </artilce>
+      </article>
     </footer>
   </section>
 </template>
@@ -127,16 +132,6 @@ export default {
 
 <style lang="less">
 .about {
-  &__description {
-    padding: 20px 0;
-    width: 50%;
-    margin-bottom: 40px;
-
-    h5 {
-      font-size: 22px;
-    }
-  }
-
   &__footer {
     text-align: center;
     margin: 0 auto 40px;
@@ -144,6 +139,32 @@ export default {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+  }
+}
+
+.about-description {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 20px;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  &__text {
+    h5 {
+      font-size: 22px;
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    height: 320px;
+    border-radius: 8px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
 
@@ -227,7 +248,8 @@ export default {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: #f8f8f8;
+    background-color: lighten(@second-color, 30%);
+    box-shadow: 1px 1px 18px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 
     img {

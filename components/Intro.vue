@@ -1,9 +1,16 @@
 <template>
   <section class="intro">
+    <div class="intro__social">
+      <a href="#">
+        <a-icon type="instagram" :style="{ fontSize: '30px' }" />
+      </a>
+    </div>
     <div class="intro-title">
       <p class="intro-title__sup">Курс</p>
       <h1 class="intro-title__title">Кератиновое выпрямление и ботокс волос</h1>
-      <a-button type="primary" size="large"> Записаться на курс </a-button>
+      <a-button type="primary" size="large" @click="showModal()">
+        Записаться на курс
+      </a-button>
     </div>
     <div>
       <picture class="intro__image">
@@ -17,17 +24,23 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 export default {
   name: 'Intro',
+  methods: {
+    ...mapActions(['showModal']),
+  },
 }
 </script>
 
 <style lang="less">
 .intro {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0 60px;
   height: calc(100vh - 48px);
+  // height: calc(100vh - 48px);
   align-items: center;
 
   &__image {
@@ -43,6 +56,12 @@ export default {
       height: 100%;
       object-fit: cover;
     }
+  }
+
+  &__social {
+    position: absolute;
+    right: 0;
+    top: 50%;
   }
 }
 
