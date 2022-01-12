@@ -59,6 +59,7 @@ export default {
     padding: 0;
     margin: 0;
     background-color: transparent;
+    overflow: hidden;
 
     .ant-anchor {
       padding: 0;

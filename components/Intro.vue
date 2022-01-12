@@ -1,7 +1,7 @@
 <template>
   <section class="intro">
     <div class="intro__social">
-      <a href="#">
+      <a href="#" class="intro__inst">
         <a-icon type="instagram" :style="{ fontSize: '30px' }" />
       </a>
     </div>
@@ -40,7 +40,6 @@ export default {
   grid-template-columns: repeat(2, 1fr);
   gap: 0 60px;
   height: calc(100vh - 48px);
-  // height: calc(100vh - 48px);
   align-items: center;
 
   &__image {
@@ -62,6 +61,10 @@ export default {
     position: absolute;
     right: 0;
     top: 50%;
+  }
+
+  &__inst {
+    color: @primary-color;
   }
 }
 

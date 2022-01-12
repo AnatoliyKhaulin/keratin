@@ -14,7 +14,7 @@
         <a-drawer
           title="Запись на курс"
           placement="right"
-          width="30%"
+          width="40%"
           :closable="false"
           :visible="isShowModal"
           @close="hideModal()"
@@ -79,6 +79,42 @@ export default {
       form: this.$form.createForm(this, { name: 'coordinated' }),
     }
   },
+  head: {
+    title: 'Кератиновое выпрямление и ботокс волос',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Кератиновое выпрямление и ботокс волос, Курс кератиновое выпрямление, курс ботокс волос',
+      },
+      { name: 'msapplication-TileColor', content: '#da532c' },
+      { name: 'theme-color', content: '#ffffff' },
+    ],
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '16x16',
+        href: '/favicon-16x16.png',
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '32x32',
+        href: '/favicon-32x32.png',
+      },
+      {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: '/apple-touch-icon.png',
+      },
+      { rel: 'manifest', href: '/site.webmanifest' },
+      { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5' },
+    ],
+  },
   computed: { ...mapState(['isShowModal']) },
   methods: {
     ...mapActions(['hideModal']),
@@ -110,4 +146,4 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="less"></style>

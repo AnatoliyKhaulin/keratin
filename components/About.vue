@@ -121,17 +121,30 @@
         </h5>
       </article>
     </footer>
+    <a-button
+      type="primary"
+      size="large"
+      class="about__btn"
+      @click="showModal()"
+    >
+      Записаться на курс
+    </a-button>
   </section>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 export default {
   name: 'About',
+  methods: {
+    ...mapActions(['showModal']),
+  },
 }
 </script>
 
 <style lang="less">
 .about {
+  padding-bottom: 80px;
   &__footer {
     text-align: center;
     margin: 0 auto 40px;
@@ -139,6 +152,11 @@ export default {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
   }
 }
 
@@ -248,7 +266,7 @@ export default {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: lighten(@second-color, 30%);
+    background-color: lighten(@primary-color, 30%);
     box-shadow: 1px 1px 18px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 
