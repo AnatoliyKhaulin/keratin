@@ -18,9 +18,11 @@
             реконструкции волос.
           </p>
         </div>
-        <picture class="about-description__photo"
-          ><img src="images/about.jpg" alt=""
-        /></picture>
+        <picture class="about-description__photo">
+          <div class="about-description__photo-wrap">
+            <img src="images/about.jpg" alt="" />
+          </div>
+        </picture>
       </article>
 
       <div class="about-list">
@@ -166,6 +168,7 @@ export default {
   gap: 0 20px;
   margin-bottom: 40px;
   padding-bottom: 20px;
+
   &__text {
     h5 {
       font-size: 22px;
@@ -173,15 +176,42 @@ export default {
   }
 
   &__photo {
-    width: 100%;
-    height: 320px;
-    border-radius: 8px;
-    overflow: hidden;
+    position: relative;
+
+    &-wrap {
+      width: 100%;
+      height: 320px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: -20px;
+      bottom: -20px;
+      height: 40px;
+      width: 60%;
+      z-index: -1;
+      background-color: @primary-color;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      right: -30px;
+      top: -30px;
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      z-index: -1;
+      background-color: @primary-color;
     }
   }
 }

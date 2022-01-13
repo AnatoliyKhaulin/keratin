@@ -6,6 +6,7 @@
         <Intro />
         <About />
         <Works />
+
         <!-- <div>Автор иконок: <a href="https://www.flaticon.com/ru/authors/phatplus" title="phatplus">phatplus</a> from <a href="https://www.flaticon.com/ru/" title="Flaticon">www.flaticon.com</a></div> -->
         <!-- <div>Автор иконок: <a href="https://www.flaticon.com/ru/authors/ehtisham-abid" title="Ehtisham Abid">Ehtisham Abid</a> from <a href="https://www.flaticon.com/ru/" title="Flaticon">www.flaticon.com</a></div> -->
         <!-- <div>Автор иконок: <a href="https://www.flaticon.com/ru/authors/berkahicon" title="berkahicon">berkahicon</a> from <a href="https://www.flaticon.com/ru/" title="Flaticon">www.flaticon.com</a></div> -->
@@ -60,6 +61,7 @@
         </a-drawer>
       </main>
     </a-config-provider>
+    <Contacts />
   </div>
 </template>
 
@@ -69,9 +71,10 @@ import Header from '~/components/Header'
 import Intro from '~/components/Intro'
 import About from '~/components/About'
 import Works from '~/components/Works'
+import Contacts from '~/components/Contancts'
 
 export default {
-  components: { Header, Intro, About, Works },
+  components: { Header, Intro, About, Works, Contacts },
   data() {
     return {
       visible: true,
