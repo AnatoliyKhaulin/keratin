@@ -7,6 +7,9 @@
         height="360"
         frameborder="0"
       ></iframe>
+      <div class="contacts__map-phone">
+        <a href="tel:89169123114">8 (916) 912-31-14</a>
+      </div>
     </div>
     <div class="contacts__form">
       <h2 class="contacts__title">Записаться онлайн</h2>
@@ -95,7 +98,7 @@ export default {
   &__title {
     display: inline-block;
     position: relative;
-    font-size: 48px;
+    font-size: 46px;
 
     &:after {
       content: '';
@@ -117,6 +120,29 @@ export default {
       bottom: 20px;
       z-index: -1;
       background-color: @primary-color;
+    }
+  }
+
+  &__map {
+    position: relative;
+
+    &-phone {
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 20px 40px;
+      background-color: rgba(@primary-color, 0.9);
+
+      a {
+        color: #000;
+        font-size: 32px;
+        font-weight: 700;
+
+        &:hover,
+        &:focus {
+          color: #000;
+        }
+      }
     }
   }
 }

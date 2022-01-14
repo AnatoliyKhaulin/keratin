@@ -1,7 +1,11 @@
 <template>
   <section class="intro">
     <div class="intro__social">
-      <a href="#" class="intro__inst">
+      <a
+        href="https://instagram.com/hair_aleksandra"
+        target="_blank"
+        class="intro__inst"
+      >
         <a-icon type="instagram" :style="{ fontSize: '30px' }" />
       </a>
     </div>
