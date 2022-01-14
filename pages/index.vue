@@ -6,7 +6,7 @@
         <Intro />
         <About />
         <Works />
-
+        <Reviews />
         <!-- <div>Автор иконок: <a href="https://www.flaticon.com/ru/authors/phatplus" title="phatplus">phatplus</a> from <a href="https://www.flaticon.com/ru/" title="Flaticon">www.flaticon.com</a></div> -->
         <!-- <div>Автор иконок: <a href="https://www.flaticon.com/ru/authors/ehtisham-abid" title="Ehtisham Abid">Ehtisham Abid</a> from <a href="https://www.flaticon.com/ru/" title="Flaticon">www.flaticon.com</a></div> -->
         <!-- <div>Автор иконок: <a href="https://www.flaticon.com/ru/authors/berkahicon" title="berkahicon">berkahicon</a> from <a href="https://www.flaticon.com/ru/" title="Flaticon">www.flaticon.com</a></div> -->
@@ -71,10 +71,11 @@ import Header from '~/components/Header'
 import Intro from '~/components/Intro'
 import About from '~/components/About'
 import Works from '~/components/Works'
+import Reviews from '~/components/Reviews'
 import Contacts from '~/components/Contancts'
 
 export default {
-  components: { Header, Intro, About, Works, Contacts },
+  components: { Header, Intro, About, Works, Reviews, Contacts },
   data() {
     return {
       visible: true,

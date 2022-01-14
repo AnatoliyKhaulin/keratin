@@ -296,8 +296,8 @@ export default {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: lighten(@primary-color, 30%);
-    box-shadow: 1px 1px 18px rgba(0, 0, 0, 0.1);
+    // background-color: lighten(@primary-color, 30%);
+    // box-shadow: 1px 1px 18px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 
     img {
