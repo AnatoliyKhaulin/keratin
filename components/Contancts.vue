@@ -85,6 +85,8 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0 60px;
+  padding-top: 60px;
+  padding-bottom: 20px;
 
   &__form {
     padding-right: 25px;
@@ -104,23 +106,23 @@ export default {
       height: 6px;
       background-color: #ef98aa;
     }
+
+    &::before {
+      content: '';
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      z-index: -1;
+      background-color: @primary-color;
+    }
   }
 }
 
 .contacts-form {
   position: relative;
   max-width: 320px;
-
-  &::after {
-    content: '';
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    position: absolute;
-    right: -80px;
-    bottom: 40px;
-    z-index: -1;
-    background-color: @primary-color;
-  }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <section id="about" class="about">
-    <h2 class="section-title">О моем курсе</h2>
+    <h2 class="section-title">О курсе</h2>
 
     <div class="about__wrapper">
       <article class="about-description">
