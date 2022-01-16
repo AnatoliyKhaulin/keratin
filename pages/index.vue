@@ -72,10 +72,17 @@ import Intro from '~/components/Intro'
 import About from '~/components/About'
 import Works from '~/components/Works'
 import Reviews from '~/components/Reviews'
-import Contacts from '~/components/Contancts'
+import Contacts from '~/components/Contacts'
 
 export default {
-  components: { Header, Intro, About, Works, Reviews, Contacts },
+  components: {
+    Header,
+    Intro,
+    About,
+    Works,
+    Reviews,
+    Contacts,
+  },
   data() {
     return {
       visible: true,
@@ -150,4 +157,4 @@ export default {
 }
 </script>
 
-<style lang="less"></style>
+<style></style>

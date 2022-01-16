@@ -44,7 +44,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="scss">
 .main-header {
   display: flex;
   align-items: center;
@@ -52,7 +52,7 @@ export default {
   padding: 10px 0;
 
   &__menu {
-    background-color: @bg-color;
+    background-color: $bg-color;
   }
 
   &__anchor {

@@ -11,28 +11,18 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
-    "@agility/agilitycms-nuxt-module": "^1.0.14",
-    "@nuxt/content": "^1.14.0",
-    "ant-design-vue": "^1.7.6",
-    "core-js": "^3.15.1",
-    "nuxt": "^2.15.7",
-    "vue-silentbox": "^2.4.5",
-    "vue-yandex-maps": "^0.11.2"
+    "@nuxt/content": "^1.15.1",
+    "ant-design-vue": "^1.7.8",
+    "core-js": "^3.20.3",
+    "nuxt": "^2.15.8",
+    "vue-silentbox": "^2.4.5"
   },
   "devDependencies": {
-    "@ant-design/colors": "^6.0.0",
-    "@babel/eslint-parser": "^7.14.7",
-    "@nuxtjs/eslint-config": "^6.0.1",
-    "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/google-fonts": "^1.3.0",
     "@nuxtjs/style-resources": "^1.2.1",
-    "eslint": "^7.29.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-nuxt": "^2.0.0",
-    "eslint-plugin-vue": "^7.12.1",
-    "less": "^4.1.2",
-    "less-loader": "^7.3.0",
-    "prettier": "^2.3.2",
-    "vue-gallery-slideshow": "^1.5.2"
-  },
-  "packageManager": "yarn@3.1.1"
+    "prettier": "^2.5.1",
+    "sass": "^1.48.0",
+    "sass-loader": "^10.2.1"
+  }
 }

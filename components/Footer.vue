@@ -8,7 +8,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="scss">
 .main-footer {
   background-color: #ccc;
 }

@@ -137,14 +137,13 @@
 <script>
 import { mapActions } from 'vuex'
 export default {
-  name: 'About',
   methods: {
     ...mapActions(['showModal']),
   },
 }
 </script>
 
-<style lang="less">
+<style lang="scss">
 .about {
   padding-bottom: 80px;
   &__footer {
@@ -199,7 +198,7 @@ export default {
       height: 40px;
       width: 60%;
       z-index: -1;
-      background-color: @primary-color;
+      background-color: $primary-color;
     }
 
     &:before {
@@ -211,7 +210,7 @@ export default {
       width: 100px;
       border-radius: 50%;
       z-index: -1;
-      background-color: @primary-color;
+      background-color: $primary-color;
     }
   }
 }
@@ -268,7 +267,7 @@ export default {
         height: 24px;
         z-index: -1;
         border-radius: 5px;
-        background-color: @primary-color;
+        background-color: $primary-color;
         opacity: 0.3;
       }
     }
@@ -307,7 +306,7 @@ export default {
   }
 
   &__title {
-    font-family: @base-font;
+    font-family: $base-font;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.8;

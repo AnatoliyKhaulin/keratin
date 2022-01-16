@@ -83,7 +83,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="scss">
 .contacts {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -119,7 +119,7 @@ export default {
       right: 20px;
       bottom: 20px;
       z-index: -1;
-      background-color: @primary-color;
+      background-color: $primary-color;
     }
   }
 
@@ -131,7 +131,7 @@ export default {
       left: 0;
       top: 0;
       padding: 20px 40px;
-      background-color: rgba(@primary-color, 0.9);
+      background-color: rgba($primary-color, 0.9);
 
       a {
         color: #000;

@@ -18,24 +18,36 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['ant-design-vue/dist/antd.css', '@/assets/css/base.less'],
+  css: ['ant-design-vue/dist/antd.css', '@/assets/css/base.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['@/plugins/antd-ui', '@/plugins/vue-gallery.client.js'],
+  plugins: [
+    '@/plugins/antd-ui',
+    '@/plugins/vue-gallery.client.js'
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
-  styleResources: {
-    less: './assets/css/variables.less',
-  },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
     '@nuxtjs/style-resources',
-    // '@agility/agilitycms-nuxt-module',
+    '@nuxtjs/google-fonts'
   ],
+  googleFonts: {
+    families: {
+      Montserrat: [400, 600, 700],
+      'Roboto+Slab': {
+        wght: [500, 600],
+      },
+    },
+    display: 'swap'
+  },
+  styleResources: {
+    scss: [
+      './assets/css/variables.scss',
+    ]
+  },
   // agilitycms: {
   //   // module options
   //   channelName: 'website',
@@ -55,12 +67,5 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    loaders: {
-      less: {
-        lessOptions: {
-          javascriptEnabled: true,
-        },
-      },
-    },
   },
 }

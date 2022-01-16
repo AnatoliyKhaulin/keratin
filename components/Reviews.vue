@@ -1,5 +1,5 @@
 <template>
-  <section class="reviews">
+  <section class="reviews" id='reviews'>
     <h2 class="section-title">Отзывы клиентов</h2>
     <silent-box :gallery="images" :lazy-loading="true" class="reviews__gallery">
     </silent-box>
@@ -29,9 +29,9 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="scss">
 .reviews {
-  padding: 80px 0;
+  padding: 40px 0;
 
   &__gallery {
     position: relative;
@@ -70,8 +70,8 @@ export default {
       right: 200px;
       top: 20px;
       z-index: -1;
-      color: @primary-color;
-      font-family: @title-font;
+      color: $primary-color;
+      font-family: $title-font;
     }
 
     &::after {
@@ -82,7 +82,7 @@ export default {
       left: 150px;
       bottom: -40px;
       z-index: -1;
-      background-color: @primary-color;
+      background-color: $primary-color;
     }
   }
 }

@@ -33,8 +33,9 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="scss">
 .works {
+  padding-bottom: 40px;
   &__gallery {
     display: grid;
     grid-gap: 15px;

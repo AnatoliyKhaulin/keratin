@@ -37,7 +37,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="scss">
 .intro {
   position: relative;
   display: grid;
@@ -68,7 +68,7 @@ export default {
   }
 
   &__inst {
-    color: @primary-color;
+    color: $primary-color;
   }
 }
 
@@ -80,7 +80,7 @@ export default {
   }
 
   &__sup {
-    color: @primary-color;
+    color: $primary-color;
     font-family: 'Roboto Slab', serif;
     font-weight: 500;
     font-size: 32px;
