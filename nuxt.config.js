@@ -60,6 +60,16 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/axios',
+    ['nuxt-mail', {
+      message: {
+        to: 'foo@bar.de',
+      },
+      smtp: {
+        host: "smtp.example.com",
+        port: 587,
+      },
+    }],
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content

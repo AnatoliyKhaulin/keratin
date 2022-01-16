@@ -62,6 +62,7 @@
       </main>
     </a-config-provider>
     <Contacts />
+    <Footer/>
   </div>
 </template>
 
@@ -73,6 +74,7 @@ import About from '~/components/About'
 import Works from '~/components/Works'
 import Reviews from '~/components/Reviews'
 import Contacts from '~/components/Contacts'
+import Footer from '~/components/Footer'
 
 export default {
   components: {
@@ -82,6 +84,7 @@ export default {
     Works,
     Reviews,
     Contacts,
+    Footer
   },
   data() {
     return {

@@ -87,7 +87,7 @@ export default {
 .contacts {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0 60px;
+  gap: 0 80px;
   padding-top: 60px;
   padding-bottom: 20px;
 
