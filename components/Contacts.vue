@@ -42,6 +42,7 @@
               { rules: [{ required: true, message: 'Введите ваш телефон' }] },
             ]"
             size="large"
+            type='number'
           >
             <a-icon
               slot="prefix"
@@ -90,6 +91,7 @@ export default {
   gap: 0 80px;
   padding-top: 60px;
   padding-bottom: 20px;
+  overflow: hidden;
 
   &__form {
     padding-right: 25px;
@@ -107,7 +109,7 @@ export default {
       left: 0;
       width: 100%;
       height: 6px;
-      background-color: #ef98aa;
+      background-color: $primary-color;
     }
 
     &::before {
@@ -119,7 +121,7 @@ export default {
       right: 20px;
       bottom: 20px;
       z-index: -1;
-      background-color: $primary-color;
+      background-color: $second-color ;
     }
   }
 
@@ -128,13 +130,13 @@ export default {
 
     &-phone {
       position: absolute;
-      left: 0;
-      top: 0;
-      padding: 20px 40px;
-      background-color: rgba($primary-color, 0.9);
+      right: 0;
+      bottom: 0;
+      padding: 10px 20px;
+      background-color: $primary-color;
 
       a {
-        color: #000;
+        color: #fff;
         font-size: 32px;
         font-weight: 700;
 

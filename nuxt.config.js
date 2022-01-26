@@ -32,7 +32,8 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     '@nuxtjs/style-resources',
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
+    '@nuxtjs/device',
   ],
   googleFonts: {
     families: {
@@ -63,11 +64,19 @@ export default {
     '@nuxtjs/axios',
     ['nuxt-mail', {
       message: {
-        to: 'foo@bar.de',
+        to: 'anatolyhaulin@gmail.com',
       },
       smtp: {
-        host: "smtp.example.com",
-        port: 587,
+        // host: "smtp.yandex.ru",
+        // port: 465,
+        // secure: true,
+        service: 'gmail',
+        auth: {
+          // user: 'info@keratin-course.ru',
+          // pass: "KeratinOdin2022",
+          user: 'callback.keratin.course@gmail.com',
+          pass: "KeratinOdin2022",
+        },
       },
     }],
   ],

@@ -1,5 +1,5 @@
 <template>
-  <section class="reviews" id='reviews'>
+  <section class="reviews" id="reviews">
     <h2 class="section-title">Отзывы клиентов</h2>
     <silent-box :gallery="images" :lazy-loading="true" class="reviews__gallery">
     </silent-box>
@@ -45,6 +45,19 @@ export default {
       overflow: hidden;
       width: 300px;
       height: 400px;
+      transition-property: transform, background-color, box-shadow;
+      transition-duration: 0.3s;
+
+      @media (min-width: 1024px) {
+        &:hover {
+          z-index: 2;
+          transform: scale(1.2);
+          box-shadow: 0 0 15px rgba(#000, 0.1);
+          background-color: #fff;
+          transition-property: transform, background-color, box-shadow;
+          transition-duration: 0.3s;
+        }
+      }
 
       &:nth-of-type(odd) {
         margin-left: auto;
@@ -63,14 +76,14 @@ export default {
     }
 
     &::before {
-      content: '"';
+      content: '”„';
       font-size: 160px;
       line-height: 1;
       position: absolute;
       right: 200px;
       top: 20px;
       z-index: -1;
-      color: $primary-color;
+      color: $second-color;
       font-family: $title-font;
     }
 
@@ -82,7 +95,7 @@ export default {
       left: 150px;
       bottom: -40px;
       z-index: -1;
-      background-color: $primary-color;
+      background-color: $second-color;
     }
   }
 }

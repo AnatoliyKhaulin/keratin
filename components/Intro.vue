@@ -6,7 +6,7 @@
         target="_blank"
         class="intro__inst"
       >
-        <a-icon type="instagram" :style="{ fontSize: '30px' }" />
+        <a-icon type="instagram" :style="{ fontSize: '36px' }" />
       </a>
     </div>
     <div class="intro-title">
@@ -68,7 +68,7 @@ export default {
   }
 
   &__inst {
-    color: $primary-color;
+    color: #c13584;
   }
 }
 

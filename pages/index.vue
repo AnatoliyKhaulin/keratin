@@ -3,66 +3,91 @@
     <a-config-provider :auto-insert-space-in-button="false">
       <main class="main-wrapper">
         <Header />
-        <Intro />
-        <About />
-        <Works />
-        <Reviews />
+<!--        <Intro />-->
+<!--        <About />-->
+<!--        <Works />-->
+<!--        <Reviews />-->
         <!-- <div>Автор иконок: <a href="https://www.flaticon.com/ru/authors/phatplus" title="phatplus">phatplus</a> from <a href="https://www.flaticon.com/ru/" title="Flaticon">www.flaticon.com</a></div> -->
         <!-- <div>Автор иконок: <a href="https://www.flaticon.com/ru/authors/ehtisham-abid" title="Ehtisham Abid">Ehtisham Abid</a> from <a href="https://www.flaticon.com/ru/" title="Flaticon">www.flaticon.com</a></div> -->
         <!-- <div>Автор иконок: <a href="https://www.flaticon.com/ru/authors/berkahicon" title="berkahicon">berkahicon</a> from <a href="https://www.flaticon.com/ru/" title="Flaticon">www.flaticon.com</a></div> -->
         <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/surang" title="surang">surang</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
         <!-- <div>Автор иконок: <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/ru/" title="Flaticon">www.flaticon.com</a></div> -->
-        <a-drawer
-          title="Запись на курс"
-          placement="right"
-          width="40%"
-          :closable="false"
-          :visible="isShowModal"
-          @close="hideModal()"
-        >
-          <a-form
-            :form="form"
-            :label-col="{ span: 4 }"
-            :wrapper-col="{ span: 20 }"
-            @submit="handleSubmit"
-          >
-            <a-form-item label="Имя">
-              <a-input
-                v-decorator="[
+      </main>
+    </a-config-provider>
+<!--    <Contacts />-->
+<!--    <Footer/>-->
+    <a-drawer
+      title="Запишись на курс"
+      placement="right"
+      :width="$device.isDesktop ? '40%' : '100%'"
+      :closable="$device.isMobile"
+      :visible="isShowModal"
+      @close="hideModal()"
+    >
+      <a-form
+        :form="form"
+        layout='vertical'
+        @submit="handleSubmit"
+        class='drawer-form'
+      >
+        <a-form-item label="Имя">
+          <a-input
+            size="large"
+            v-decorator="[
                   'name',
                   {
                     rules: [{ required: true, message: 'Как вас зовут?' }],
                   },
                 ]"
-              />
-            </a-form-item>
-            <a-form-item label="Email">
-              <a-input
-                v-decorator="[
-                  'email',
+          />
+        </a-form-item>
+        <a-form-item label="Телефон">
+          <a-input
+            size="large"
+            type='number'
+            v-decorator="[
+                  'phone',
                   {
                     rules: [
                       {
                         required: true,
-                        message: 'Введите вашу почту',
-                        type: 'email',
+                        message: 'Введите ваш номер телефона',
                       },
                     ],
                   },
                 ]"
-              />
-            </a-form-item>
-            <a-form-item :wrapper-col="{ span: 20, offset: 4 }">
-              <a-button type="primary" html-type="submit" size="large">
-                Записаться!
-              </a-button>
-            </a-form-item>
-          </a-form>
-        </a-drawer>
-      </main>
-    </a-config-provider>
-    <Contacts />
-    <Footer/>
+          />
+        </a-form-item>
+        <a-form-item :wrapper-col="{ span: 24 }">
+          <a-button type="primary" html-type="submit" size="large" class='drawer-form__btn'>
+            Записаться!
+          </a-button>
+        </a-form-item>
+      </a-form>
+    </a-drawer>
+    <a-drawer
+      placement="left"
+      width="100%"
+      :closable="true"
+      :visible="isShowMenu"
+      @close="hideMenu()"
+      class='menu-mob'
+    >
+      <nuxt-link :to="{path: '/', hash: 'about'}" v-scroll-to="{el: '#about'}" class='menu-mob__item' @click.native='hideMenu()'>
+        <a-icon type="fund" />
+        <span>О курсе</span>
+      </nuxt-link>
+
+      <nuxt-link :to="{path: '/', hash: 'works'}" v-scroll-to="{el: '#works'}"  class='menu-mob__item' @click.native='hideMenu()'>
+        <a-icon type="home" />
+        <span>Студия</span>
+      </nuxt-link>
+
+      <nuxt-link :to="{path: '/', hash: 'reviews'}" v-scroll-to="{el: '#reviews'}"  class='menu-mob__item' @click.native='hideMenu()'>
+        <a-icon type="message" />
+        <span>Отзывы</span>
+      </nuxt-link>
+    </a-drawer>
   </div>
 </template>
 
@@ -88,9 +113,9 @@ export default {
   },
   data() {
     return {
-      visible: true,
       formLayout: 'horizontal',
       form: this.$form.createForm(this, { name: 'coordinated' }),
+      currentNav: []
     }
   },
   head: {
@@ -129,26 +154,22 @@ export default {
       { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5' },
     ],
   },
-  computed: { ...mapState(['isShowModal']) },
+  computed: { ...mapState(['isShowModal', 'isShowMenu']) },
   methods: {
-    ...mapActions(['hideModal']),
-    // afterVisibleChange(val) {
-    //   console.log('visible', val)
-    // },
-    // showDrawer() {
-    //   this.visible = true
-    // },
-    // onClose() {
-    //   this.visible = false
-    // },
-    // showModal() {
-    //   this.visible = true
-    // },
+    ...mapActions(['hideModal', 'hideMenu', 'showMenu']),
     handleSubmit(e) {
       e.preventDefault()
       this.form.validateFields((err, values) => {
         if (!err) {
-          console.log('Received values of form: ', values)
+          console.table(values)
+          this.$mail.send({
+            from: 'Обратная связь',
+            subject: 'Заявка с сайта keratin-course, запись на курс',
+            text: `
+              <p>Имя: ${values.name}</p>
+              <p>Телефон: ${values.phone}</p>
+            `
+          })
         }
       })
     },
@@ -160,4 +181,29 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang='scss'>
+.ant-drawer-title {
+  font-weight: 700;
+  font-size: 28px;
+}
+.drawer-form {
+  &__btn {
+    width: 100%;
+  }
+}
+.menu-mob {
+  height: 100%;
+  .ant-drawer-body {
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item {
+    font-size: 18px;
+    padding: 10px;
+  }
+}
+</style>

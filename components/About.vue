@@ -198,7 +198,7 @@ export default {
       height: 40px;
       width: 60%;
       z-index: -1;
-      background-color: $primary-color;
+      background-color: $second-color;
     }
 
     &:before {
@@ -210,7 +210,7 @@ export default {
       width: 100px;
       border-radius: 50%;
       z-index: -1;
-      background-color: $primary-color;
+      background-color: $second-color;
     }
   }
 }
@@ -268,7 +268,7 @@ export default {
         z-index: -1;
         border-radius: 5px;
         background-color: $primary-color;
-        opacity: 0.3;
+        opacity: 0.2;
       }
     }
   }

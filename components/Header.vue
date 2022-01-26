@@ -1,6 +1,11 @@
 <template>
   <header class="main-header">
+    <a-button v-if='$device.isMobile' type="primary" @click="toggleCollapsed" size='large'>
+      <a-icon :type="collapsed ? 'menu-unfold' : 'menu-fold'" />
+    </a-button>
+
     <a-anchor
+      v-if='$device.isDesktop'
       wrapper-class="main-header__anchor"
       :affix="false"
       :offset-top="40"
@@ -36,10 +41,15 @@ export default {
   data() {
     return {
       currentNav: [],
+      collapsed: false
     }
   },
   methods: {
-    ...mapActions(['showModal']),
+    ...mapActions(['showModal', 'showMenu']),
+    toggleCollapsed() {
+      this.showMenu()
+      this.collapsed = !this.collapsed
+    }
   },
 }
 </script>
