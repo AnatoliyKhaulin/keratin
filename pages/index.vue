@@ -3,7 +3,7 @@
     <a-config-provider :auto-insert-space-in-button="false">
       <main class="main-wrapper">
         <Header />
-<!--        <Intro />-->
+        <Intro />
 <!--        <About />-->
 <!--        <Works />-->
 <!--        <Reviews />-->

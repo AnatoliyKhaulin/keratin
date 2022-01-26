@@ -59,6 +59,11 @@ export default {
       height: 100%;
       object-fit: cover;
     }
+
+    @media (max-width: 1024px) {
+      width: 300px;
+      height: 300px;
+    }
   }
 
   &__social {
@@ -70,6 +75,14 @@ export default {
   &__inst {
     color: #c13584;
   }
+
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0;
+    height: auto;
+    padding: 30px 0;
+  }
 }
 
 .intro-title {
@@ -77,6 +90,10 @@ export default {
     font-size: 57px;
     font-weight: 600;
     margin-bottom: 16px;
+
+    @media (max-width: 1024px) {
+      font-size: 42px;
+    }
   }
 
   &__sup {
@@ -85,6 +102,10 @@ export default {
     font-weight: 500;
     font-size: 32px;
     margin-bottom: 0;
+  }
+
+  @media (max-width: 1024px) {
+    margin-bottom: 40px;
   }
 }
 </style>
