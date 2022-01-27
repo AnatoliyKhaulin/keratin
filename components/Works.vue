@@ -36,6 +36,7 @@ export default {
 <style lang="scss">
 .works {
   padding-bottom: 40px;
+
   &__gallery {
     display: grid;
     grid-gap: 15px;
@@ -57,7 +58,22 @@ export default {
       &:nth-of-type(2) {
         grid-row: span 2;
       }
+
+      @media (max-width: 1024px) {
+        width: 100%;
+        height: 230px;
+        margin-bottom: 20px;
+      }
     }
+
+    @media (max-width: 1024px) {
+      display: block;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 </style>

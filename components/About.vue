@@ -146,6 +146,7 @@ export default {
 <style lang="scss">
 .about {
   padding-bottom: 80px;
+
   &__footer {
     text-align: center;
     margin: 0 auto 40px;
@@ -153,11 +154,22 @@ export default {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+
+    @media (max-width: 1024px) {
+      flex-flow: column nowrap;
+      align-items: center;
+      padding-top: 0;
+    }
   }
 
   &__btn {
     display: block;
     margin: 0 auto;
+  }
+
+  @media (max-width: 1024px) {
+    padding-top: 20px;
+    padding-bottom: 40px;
   }
 }
 
@@ -176,12 +188,17 @@ export default {
 
   &__photo {
     position: relative;
+    display: block;
 
     &-wrap {
       width: 100%;
       height: 320px;
       border-radius: 8px;
       overflow: hidden;
+
+      @media (max-width: 1024px) {
+        height: 220px;
+      }
     }
 
     img {
@@ -213,6 +230,10 @@ export default {
       background-color: $second-color;
     }
   }
+
+  @media (max-width: 1024px) {
+    display: block;
+  }
 }
 
 .about-list {
@@ -223,6 +244,11 @@ export default {
 
   &__text {
     width: 60%;
+
+    @media (max-width: 1024px) {
+      width: 100%;
+      margin-bottom: 26px;
+    }
   }
 
   &__icon {
@@ -236,6 +262,11 @@ export default {
       height: 100%;
       object-fit: cover;
       margin: auto;
+    }
+
+    @media (max-width: 1024px) {
+      width: 100%;
+      height: 240px;
     }
   }
 
@@ -270,12 +301,30 @@ export default {
         background-color: $primary-color;
         opacity: 0.2;
       }
+
+      @media (max-width: 1024px) {
+        margin-left: 15px;
+      }
     }
+  }
+
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    margin-bottom: 20px;
   }
 
   &_right-text {
     .about-list__text {
       width: 60%;
+
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      flex-flow: column nowrap;
     }
   }
 }
@@ -303,6 +352,10 @@ export default {
       width: 50%;
       height: 50%;
     }
+
+    @media (max-width: 1024px) {
+      margin-bottom: 10px;
+    }
   }
 
   &__title {
@@ -311,6 +364,15 @@ export default {
     font-size: 16px;
     line-height: 1.8;
     margin: 0;
+
+    @media (max-width: 1024px) {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    padding: 5px;
   }
 }
 
@@ -322,10 +384,22 @@ export default {
   &__icon {
     margin-bottom: 0;
     margin-right: 20px;
+
+    @media (max-width: 1024px) {
+      margin-right: 0;
+    }
   }
 
   &__title {
     font-size: 22px;
+
+    @media (max-width: 1024px) {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    flex-flow: column nowrap;
   }
 }
 </style>

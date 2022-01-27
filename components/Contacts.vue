@@ -4,7 +4,7 @@
       <iframe
         src="https://yandex.ru/map-widget/v1/?um=constructor%3A8e2ae906772d0a5158c4b5e0d311a2c920db32c136e39d5a937da2140c11bceb&amp;source=constructor"
         width="100%"
-        height="360"
+        :height="mapHeight"
         frameborder="0"
       ></iframe>
       <div class="contacts__map-phone">
@@ -69,6 +69,7 @@ export default {
     return {
       formLayout: 'vertical',
       form: this.$form.createForm(this, { name: 'contacts' }),
+      mapHeight: this.$device.isDesktop ? 360 : 250
     }
   },
   methods: {
@@ -95,6 +96,10 @@ export default {
 
   &__form {
     padding-right: 25px;
+
+    @media (max-width: 1024px) {
+      padding: 0;
+    }
   }
 
   &__title {
@@ -110,6 +115,10 @@ export default {
       width: 100%;
       height: 6px;
       background-color: $primary-color;
+
+      @media (max-width: 1024px) {
+        height: 4px;
+      }
     }
 
     &::before {
@@ -121,7 +130,17 @@ export default {
       right: 20px;
       bottom: 20px;
       z-index: -1;
-      background-color: $second-color ;
+      background-color: $second-color;
+
+      @media (max-width: 1024px) {
+        right: -20px;
+        bottom: -20px;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      font-size: 32px;
+      margin-bottom: 20px;
     }
   }
 
@@ -144,13 +163,32 @@ export default {
         &:focus {
           color: #000;
         }
+
+        @media (max-width: 1024px) {
+          font-size: 20px;
+        }
       }
     }
+
+    @media (max-width: 1024px) {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    padding: 40px 15px 20px;
   }
 }
 
 .contacts-form {
   position: relative;
   max-width: 320px;
+
+  @media (max-width: 1024px) {
+    max-width: 100%;
+  }
 }
 </style>

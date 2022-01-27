@@ -27,6 +27,10 @@ export default {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 1024px) {
+      padding: 15px;
+    }
   }
 
   &__copy {

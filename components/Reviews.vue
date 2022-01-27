@@ -73,6 +73,11 @@ export default {
         height: 100%;
         object-fit: contain;
       }
+
+      @media (max-width: 1024px) {
+        width: 75%;
+        height: 320px;
+      }
     }
 
     &::before {
@@ -97,6 +102,16 @@ export default {
       z-index: -1;
       background-color: $second-color;
     }
+
+    @media (max-width: 1024px) {
+      display: block;
+      padding-top: 0;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding-top: 20px;
+    padding-bottom: 40px;
   }
 }
 </style>

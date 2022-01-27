@@ -1,6 +1,6 @@
 <template>
   <header class="main-header">
-    <a-button v-if='$device.isMobile' type="primary" @click="toggleCollapsed" size='large'>
+    <a-button v-if='$device.isMobile' type="primary" @click="toggleCollapsed" size='large' class='main-header__menu-bnt'>
       <a-icon :type="collapsed ? 'menu-unfold' : 'menu-fold'" />
     </a-button>
 

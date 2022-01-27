@@ -4,9 +4,9 @@
       <main class="main-wrapper">
         <Header />
         <Intro />
-<!--        <About />-->
-<!--        <Works />-->
-<!--        <Reviews />-->
+        <About />
+        <Works />
+        <Reviews />
         <!-- <div>Автор иконок: <a href="https://www.flaticon.com/ru/authors/phatplus" title="phatplus">phatplus</a> from <a href="https://www.flaticon.com/ru/" title="Flaticon">www.flaticon.com</a></div> -->
         <!-- <div>Автор иконок: <a href="https://www.flaticon.com/ru/authors/ehtisham-abid" title="Ehtisham Abid">Ehtisham Abid</a> from <a href="https://www.flaticon.com/ru/" title="Flaticon">www.flaticon.com</a></div> -->
         <!-- <div>Автор иконок: <a href="https://www.flaticon.com/ru/authors/berkahicon" title="berkahicon">berkahicon</a> from <a href="https://www.flaticon.com/ru/" title="Flaticon">www.flaticon.com</a></div> -->
@@ -14,8 +14,8 @@
         <!-- <div>Автор иконок: <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/ru/" title="Flaticon">www.flaticon.com</a></div> -->
       </main>
     </a-config-provider>
-<!--    <Contacts />-->
-<!--    <Footer/>-->
+    <Contacts />
+    <Footer/>
     <a-drawer
       title="Запишись на курс"
       placement="right"
